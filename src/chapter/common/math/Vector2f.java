@@ -26,17 +26,6 @@ public class Vector2f {
 	
 	
 	/**
-	 * sets the components of the vectors
-	 * @param _x the new x component of the vector
-	 * @param _y the new y component of the vector
-	 */
-	public void set(float _x, float _y) {
-		
-		m_X = _x;
-		m_Y = _y;
-	}
-	
-	/**
 	 * adds the other vector to this and stores it in this
 	 * @param _other the vector to add from this vector
 	 */
@@ -85,6 +74,29 @@ public class Vector2f {
 		return new Vector2f(m_X, m_Y);
 	}
 	
+	
+	/**
+	 * sets the components of the vectors
+	 * @param _x the new x component of the vector
+	 * @param _y the new y component of the vector
+	 */
+	public void set(float _x, float _y) {
+		
+		m_X = _x;
+		m_Y = _y;
+	}
+	
+	/**
+	 * sets the components of the vectors
+	 * @param _other the vector to copy the content from
+	 */
+	public void set(Vector2f _other) {
+		
+		m_X = _other.getX();
+		m_Y = _other.getY();
+	}
+	
+	
 	/**
 	 * returns the x component of the vector
 	 * @return the x component
@@ -119,6 +131,17 @@ public class Vector2f {
 	public void setY(float _y) {
 		
 		m_Y = _y;
+	}
+	
+	public String toString() {
+		
+		StringBuilder result = new StringBuilder();
+		result.append("(");
+		result.append(String.format("%5.2f", m_X));
+		result.append(", ");
+		result.append(String.format("%5.2f", m_Y));
+		result.append(")");
+		return result.toString();
 	}
 	
 }

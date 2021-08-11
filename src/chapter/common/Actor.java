@@ -15,4 +15,15 @@ public class Actor {
 		this(new Vector2f());
 	}
 	
+	
+	
+	public Vector2f getPosition() {
+		
+		return m_Position;
+	}
+	
+	public void setPosition(Vector2f _position) {
+		
+		m_Position.set(_position);
+	}
 }
