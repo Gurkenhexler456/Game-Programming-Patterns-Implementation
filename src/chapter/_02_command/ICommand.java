@@ -6,4 +6,6 @@ public interface ICommand {
 
 	public void execute(Actor _actor);
 	
+	public void undo(Actor _actor);
+	
 }
